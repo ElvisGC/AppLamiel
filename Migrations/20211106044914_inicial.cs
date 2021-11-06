@@ -48,26 +48,6 @@ namespace PasteleriaLaMiel.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Citas",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    TipoDeCita = table.Column<string>(type: "text", nullable: true),
-                    Nombres = table.Column<string>(type: "text", nullable: true),
-                    Apellidos = table.Column<string>(type: "text", nullable: true),
-                    Email = table.Column<string>(type: "text", nullable: true),
-                    Celular = table.Column<int>(type: "integer", nullable: false),
-                    DNI = table.Column<int>(type: "integer", nullable: false),
-                    Fecha = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    Hora = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Citas", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "t_contactanos",
                 columns: table => new
                 {
@@ -82,6 +62,23 @@ namespace PasteleriaLaMiel.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_t_contactanos", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_pedido",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    nombre = table.Column<string>(type: "text", nullable: true),
+                    apellidos = table.Column<string>(type: "text", nullable: true),
+                    celular = table.Column<string>(type: "text", nullable: true),
+                    email = table.Column<string>(type: "text", nullable: true),
+                    mensaje = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_pedido", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -301,10 +298,10 @@ namespace PasteleriaLaMiel.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Citas");
+                name: "t_contactanos");
 
             migrationBuilder.DropTable(
-                name: "t_contactanos");
+                name: "t_pedido");
 
             migrationBuilder.DropTable(
                 name: "t_proforma");

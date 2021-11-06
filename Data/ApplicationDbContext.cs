@@ -13,7 +13,7 @@ namespace PasteleriaLaMiel.Data
         {
         }
 
-        public DbSet<PasteleriaLaMiel.Models.Citas> Citas {get; set;} 
+        public DbSet<PasteleriaLaMiel.Models.Pedido> Pedido {get; set;} 
         public DbSet<PasteleriaLaMiel.Models.Contactanos> Contactanos { get; set; }
         public DbSet<PasteleriaLaMiel.Models.Productos> Productos { get; set; }
         public DbSet<PasteleriaLaMiel.Models.Proforma> Carrito { get; set; }

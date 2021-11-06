@@ -10,7 +10,7 @@ using PasteleriaLaMiel.Data;
 namespace PasteleriaLaMiel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211106022752_inicial")]
+    [Migration("20211106044914_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -219,49 +219,6 @@ namespace PasteleriaLaMiel.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("PasteleriaLaMiel.Models.Citas", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<string>("Apellidos")
-                        .HasColumnType("text")
-                        .HasColumnName("Apellidos");
-
-                    b.Property<int>("Celular")
-                        .HasColumnType("integer")
-                        .HasColumnName("Celular");
-
-                    b.Property<int>("DNI")
-                        .HasColumnType("integer")
-                        .HasColumnName("DNI");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("text")
-                        .HasColumnName("Email");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<string>("Hora")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Nombres")
-                        .HasColumnType("text")
-                        .HasColumnName("Nombres");
-
-                    b.Property<string>("TipoDeCita")
-                        .HasColumnType("text")
-                        .HasColumnName("TipoDeCita");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Citas");
-                });
-
             modelBuilder.Entity("PasteleriaLaMiel.Models.Contactanos", b =>
                 {
                     b.Property<int>("Id")
@@ -293,6 +250,39 @@ namespace PasteleriaLaMiel.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("t_contactanos");
+                });
+
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Pedido", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Apellidos")
+                        .HasColumnType("text")
+                        .HasColumnName("apellidos");
+
+                    b.Property<string>("Celular")
+                        .HasColumnType("text")
+                        .HasColumnName("celular");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text")
+                        .HasColumnName("email");
+
+                    b.Property<string>("Mensaje")
+                        .HasColumnType("text")
+                        .HasColumnName("mensaje");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("text")
+                        .HasColumnName("nombre");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_pedido");
                 });
 
             modelBuilder.Entity("PasteleriaLaMiel.Models.Productos", b =>
