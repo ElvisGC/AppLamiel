@@ -1,0 +1,110 @@
+@{
+    
+    Layout="_Layout";
+}
+
+@model OpticaSanfrancisco.Models.Citas
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active"style="margin-top: -20%;">
+      <img src="~/Img/Doctorfacherito.jpg" class="d-block w-200" alt="...">
+      <div class="carousel-caption d-none d-md-block" >
+        <div class="col-md-1 order-md-1">
+    </div>
+        <div class="col-md-10 order-md-1">
+          <h4 style="text-align: center;" class="mb-3 colorForm">PEDIDO</h4>
+          <form asp-controller="Citas" asp-action="NuevaCita">
+            <div class="row">
+              <div class="col-md-6 mb-3 formM">
+                <label asp-for="Nombres" class="colorForm">Nombres</label>
+                <input asp-for="Nombres"  class="form-control" />
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 formM">
+                <label asp-for="Apellidos" class="colorForm">Apellidos</label>
+                 <input asp-for="Apellidos"  class="form-control" />
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+       
+    
+            <div class="mb-3 formM">
+              <label asp-for="Email" class="colorForm">Email</label>
+              <input asp-for="Email" type="text" class="form-control" />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+    
+            <div class="mb-3 formM">
+              <label asp-for="Celular" class="colorForm">Telefono </label>
+              <input asp-for="Celular" type="number" class="form-control" />
+            </div>
+    
+            <div class="row">
+              <div class="col-md-5 mb-3 formM">
+                <label asp-for="DNI" class="colorForm">DNI</label>
+                <input asp-for="DNI" type="number" class="form-control" />
+                <div class="invalid-feedback">
+                  Dni invalido
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 formM">
+                <label asp-for="Fecha" class="colorForm">Fecha</label>
+                <input asp-for="Fecha"  class="form-control" />
+                <div class="invalid-feedback">
+                 Selecciona un departamento
+                </div>
+              </div>
+              <div class="col-md-3 mb-3 formM">
+                <label asp-for="Hora" class="colorForm">Hora</label>
+                <input asp-for="Hora" type="time" class="form-control" />
+                <div class="invalid-feedback">
+                La hora es requerida
+                </div>
+              </div>
+            </div>
+        
+          <div class="mb-3 formM">
+              <label asp-for="TipoDeCita" class="colorForm" >Descripcion del pedido</label>
+              <input asp-for="TipoDeCita"  class="form-control" />
+
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                      </div>
+          </div>
+          
+
+         
+
+
+
+            <div class="button">
+
+       
+            <a class="btn btn-secondary" type="submit" onclick="confirm('Pedido realizado con exito');  clicked();">Registrar Pedido</button> </a>
+            </div>
+            </form>
+        </div>
+      </div>
+    
+    <h1>@ViewData["Message"]</h1>
+      </div>
+      
+    </div>
+  
+  </div>
+</div>
+
+
+
+
+
+
+
+

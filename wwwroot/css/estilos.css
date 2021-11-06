@@ -1,0 +1,92 @@
+.fondo{
+    background: url('../img/fondo.jpg') center center fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.fondo2{
+    background: url('../img/fondo2.jpg') center center fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.fondo3{
+    background: url('../img/fondo3.jpg') center center fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.contenedor{
+  margin-left: 50%;
+    background:white;
+    opacity: 0.9;
+    border-radius: 25px;
+    padding: 15px;
+    width: 500px;
+    text-decoration: bold;
+}
+.header{
+    background: white;
+ 
+}
+.titulo{
+    
+    padding: 20px;
+}
+
+
+*{
+	font-family: sans-serif;
+}
+h1{
+  text-align: center;
+}
+
+.fab{
+    width: 80px;
+    text-align: center;
+    font-size: 24px;
+    
+}
+#icons{
+    border-radius: 60%;
+    border-color: #fff;
+    border-width: 5%;
+    border: #E8EBE7  8px solid;
+}
+.social{
+    position: fixed;
+    left:-40px;
+    top: 250px;
+}
+.social ul{
+    list-style: none;
+    
+    
+}
+.social a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    z-index: 0;
+    transition: 0.1s ease;
+}
+.fa-facebook-f{
+    background: #3b5998;
+}
+.fa-twitter{
+    background: #00abf0;
+}
+.fa-get-pocket{
+    background: #ae181f;
+}
+.fa-facebook-messenger{
+    background: #0084ff;
+}
+.fa-whatsapp{
+    background: #25d366;
+}
+.fa-google-plus-g{
+    background: #d95232;
+}
+.social a:hover{
+    padding: 10px 25px;
+}

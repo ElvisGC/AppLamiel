@@ -1,0 +1,67 @@
+@model IEnumerable<OpticaSanfrancisco.Models.Contactanos>
+
+<h2>Lista de Contactanos</h2>
+
+<p>
+    <a asp-action="Create"></a>
+</p>
+<table class="table table-hover">
+     <thead class="thead-dark">
+        <tr>
+                <th scope="col">
+                     @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                    <th scope="col">
+                    @Html.DisplayNameFor(model => model.Apellidos)
+                </th>
+                    <th scope="col">
+                    @Html.DisplayNameFor(model => model.Celular)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Mensaje)
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">
+                    @Html.DisplayFor(model => item.Id)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                  <th >
+                    @Html.DisplayFor(model => item.Apellidos)
+                </th>
+                    <th>
+                    @Html.DisplayFor(model => item.Celular)
+                </th>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mensaje)
+                </td>
+
+
+                  <td>
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Borrar</a>
+                  </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h1>@ViewData["Message"]</h1>
+  
+<a asp-action="ExportarExcel" class="btn btn-success">Exporta a Excel</a>

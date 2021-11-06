@@ -1,0 +1,27 @@
+﻿@model OpticaSanfrancisco.Models.Productos
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Borrar Producto</h1>
+
+<h3>    </h3>
+<div>
+    <h4>¿Esta seguro que desea borrar el producto?</h4>
+    <hr />
+    <dl class="row">
+        
+            
+    
+          
+
+
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> 
+        <a asp-action="Index"  class="btn btn-primary" >Regresar a Lista</a>
+    </form>
+</div>

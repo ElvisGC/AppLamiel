@@ -1,0 +1,39 @@
+@{
+    
+    Layout="_Layout";
+}
+@model OpticaSanfrancisco.Models.Citas
+    
+ 
+<form asp-controller="Citas" asp-action="EditarCitas">
+    <label asp-for="TipoDeCita" class="control-label"></label>
+     <input asp-for="TipoDeCita"  class="form-control" />
+
+     <label asp-for="Nombres" class="control-label"></label>
+     <input asp-for="Nombres"  class="form-control" />
+
+     <label asp-for="Apellidos" class="control-label"></label>
+     <input asp-for="Apellidos"  class="form-control" />
+
+    <label asp-for="Email" class="control-label"></label>
+     <input asp-for="Email" type="text" class="form-control" />
+
+     <label asp-for="Celular" class="control-label"></label>
+     <input asp-for="Celular" type="text" class="form-control" />
+
+    
+     <label asp-for="DNI" class="control-label"></label>
+     <input asp-for="DNI" type="text" class="form-control" />
+
+     <label asp-for="Fecha" class="control-label"></label>
+     <input asp-for="Fecha"  class="form-control" />
+
+     <label asp-for="Hora" class="control-label"></label>
+     <input asp-for="Hora" type="time" class="form-control" />
+     
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Editar</button> 
+    </div>              
+</form>
+<h1>@ViewData["Message"]</h1>

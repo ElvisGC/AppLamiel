@@ -1,0 +1,64 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    @if(UserManager.GetUserName(User).Equals("admin@gmail.com"))//contra Admin12.
+    {
+
+   <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Citas" asp-action="Citas"> </a> 
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Index"> Reporte Contactanos </a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index"> (+)Productos </a>
+    </li> 
+
+     <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index"> (+)Catalogo </a>
+    </li>
+ 
+}
+
+
+else{ 
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Create">Contactanos</a>
+    </li> 
+
+     <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Nosotros" asp-action="Index">Nosotros</a>
+    </li> 
+
+   <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">Catálogo</a>
+    </li> 
+<li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Proforma" asp-action="Carrito"><img src="~/img/carro2.png" width="30"></a>
+    </li> 
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Citas" asp-action="NuevaCita"></a>
+    </li> 
+    
+
+ 
+}
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Create">Contactanos</a>
+    </li> 
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index"> Catálogo </a>
+    </li> 
+
+   <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Nosotros" asp-action="Index"> Nosotros </a>
+    </li> 
+
+}

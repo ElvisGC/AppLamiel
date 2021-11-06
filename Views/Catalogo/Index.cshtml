@@ -1,0 +1,70 @@
+﻿@model IEnumerable<OpticaSanfrancisco.Models.Productos>
+@{
+    ViewData["Title"]="Catálogo";
+}
+
+
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex" style="margin-left: 20%;">
+      <input class="form-control me-2" style="width: 500px;" type="search" placeholder="Buscar" aria-label="Search" value=" @ViewData["Getemployeedetails"]" name="Empsearch">
+      <div>  </div>
+      <button class="btn btn-outline-danger" type="submit">Buscar</button>
+
+     
+      
+      <a style="margin-left: 1%; color: #893232 " asp-action="Index"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+</svg></a>
+    </form>
+  </div>
+</nav>
+
+<!--COMENTARIO--<form  asp-action="Index" method="get">
+    <p>
+         <input type="search" placeholder="enter"  value=" @ViewData["Getemployeedetails"]" name="Empsearch"/>
+        <input type="submit" value="search" class="btn btn-primary" />
+
+        <a asp-action="Index">enter</a>
+    </p>
+</form>-->
+
+
+ <div class="container" >
+<h1>@ViewData["Title"]</h1>
+  <div class="container">
+    <h1>@ViewData["Message"]</h1>
+    <div class="row ">
+      <div class="col">
+        <div id="products" class="mb-3">
+          <div class="row">
+            @foreach (var item in Model) {
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="250" height="270" style="margin-left: 7%;"
+                       src="~/Img/Productos/@item.Imagen" alt="@item.Imagen"  />
+                  </div>
+                </div>
+                
+                <div class="card-body">
+                             
+                  <center> <p class="card-text">@Html.DisplayFor(modelItem => item.Marca)</p></center>
+                  <center><p class="card-text">S/. @Html.DisplayFor(modelItem => item.Precio)</p><center>
+
+                 <center><a class="btn btn-danger" style="background-color:#893232;border-color:#893232" asp-action="Add" asp-route-id="@item.ID"> <img src="~/img/carro.png"class="carrito" width="26"> Agregar al Carrito</a></center>
+                  
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </div>

@@ -1,0 +1,103 @@
+@model IEnumerable<Productos>
+    
+
+@{
+    ViewData["Title"] = "Documento";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactPDF</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="~/images/generic-logo.png" />
+        </div>
+        <div class="col-sm-8 text-center">
+            <h2>PRODUCTOS</h2>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Codigo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Familia)
+                </th>
+                 <th>
+                    @Html.DisplayNameFor(model => model.Linea)
+                </th>
+                <th>
+                     @Html.DisplayNameFor(model => model.Categoria)
+                </th>
+                <th>
+                     @Html.DisplayNameFor(model => model.Marca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Material)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Talla)
+                </th>
+                <th>
+                     @Html.DisplayNameFor(model => model.Precio)
+                </th>
+              
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td>
+                         @Html.DisplayFor(modelItem => item.Familia)
+                    </td>
+                   <td>
+                         @Html.DisplayFor(modelItem => item.Linea)
+                    </td>
+                    <td>
+                          @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                          @Html.DisplayFor(modelItem => item.Marca)
+                    </td>
+                     <td>
+                         @Html.DisplayFor(modelItem => item.Material)
+                    </td>
+                     <td>
+                       @Html.DisplayFor(modelItem => item.Talla)
+                    </td>
+                     <td>
+                         @Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                     
+                    
+                     
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</body>
+</html>

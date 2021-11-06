@@ -1,0 +1,53 @@
+﻿@model OpticaSanfrancisco.Models.Productos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+             <div class="form-group">
+                <label asp-for="Marca" class="control-label">Nombre</label>
+                <input asp-for="Marca" class="form-control" />
+                <span asp-validation-for="Marca" class="text-danger"></span>
+            </div>
+          
+          
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label">Precio S/.</label>
+                <input asp-for="Precio" class="form-control" />
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagen" class="control-label"></label>
+                <input asp-for="Imagen" class="form-control" />
+                <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" class="form-control" >
+                     <option value="A">A</option>
+                     <option value="I">I</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>                
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-secondary" style="width: 40%;" />
+                <a asp-action="Index"  class="btn btn-primary" >Regresar a Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

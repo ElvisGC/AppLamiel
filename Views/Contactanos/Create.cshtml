@@ -1,0 +1,57 @@
+@{
+    
+    Layout="_Layout";
+}
+@model Contactanos
+
+<link rel="stylesheet" href="~/css/estilos.css" />
+
+<body class="fondo3">
+<div class="row">
+  
+   <h1 style="text-align: center;">Contactanos</h1>
+  </div>
+<div class="row" >
+  <div class="col-md-6">
+        <form asp-controller="Contactanos" asp-action="Create">
+                <div class="form-group" style="text-align: left;">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control" type="text" required/>
+                </div>   
+
+                <div class="form-group" style="text-align: left;">
+                    <label asp-for="Apellidos" class="control-label"></label>
+                    <input asp-for="Apellidos" class="form-control"  type="text" required/>
+                </div>               
+                    
+                <div class="form-group" style="text-align: left;">
+                    <label asp-for="Celular" class="control-label"></label>
+                    <input asp-for="Celular" class="form-control" type="number" maxlength="9" required />
+                </div>  
+                <div class="form-group" style="text-align: left;">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input type="email" required asp-for="Email" class="form-control"  />
+                </div>  
+                <div  class="mb-3" style="text-align: left;" >
+                    <label asp-for="Mensaje" class="control-label" ></label>
+                    <textarea asp-for="Mensaje"  class="form-control "></textarea>
+                </div>   
+                    
+                <div class="form-group"  >
+                    <button type="submit" class="btn btn-primary" type="text" required>Enviar</button> 
+        </div>                
+
+        </form>
+     </div>
+
+        <div class="col-md-6" style="width: 100%;">
+
+
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.5098169496528!2d-71.53809368554357!3d-16.398914242481126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a574dd49499%3A0x5eb2718fb90b1baa!2sMercaderes%20Plaza%2C%20Calle%20Mercaderes%2C%20Arequipa%2004001!5e0!3m2!1ses-419!2spe!4v1620993440270!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+</body>
+
+<div class="alert alert-success" role="alert">
+    <h1>@ViewData["Message"]</h1>
+</div>

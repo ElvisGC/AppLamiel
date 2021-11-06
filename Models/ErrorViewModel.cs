@@ -1,6 +1,6 @@
 using System;
 
-namespace AppLamiel.Models
+namespace OpticaSanfrancisco.Models
 {
     public class ErrorViewModel
     {

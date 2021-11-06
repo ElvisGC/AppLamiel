@@ -1,0 +1,196 @@
+@model IEnumerable<OpticaSanfrancisco.Models.Proforma>
+@{
+    ViewData["Title"] = "En Proceso";
+}
+<section id="catalogue" class="catalogue section-bg" style="text-align: center;">
+<div class="container">
+ 
+    <div class="container">
+
+        <div class="section-title">
+ 
+     <label for="address" class="colorForm">FINALIZAR COMPRA</label>
+     
+        </div>
+
+
+    
+
+   <!-- <table class="table table-hover">
+    <thead class="tables">
+        <tr>
+              <th scope="col">
+                    @Html.DisplayNameFor(model => model.Producto.Imagen)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Producto.Codigo)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+        </tr>
+    </thead>
+	@foreach (var item in Model)
+	{
+        //@if (item.Email == @User.Identity.Name)
+        //{
+            <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Imagen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            </tr>
+        //}
+	}*/
+    </tbody>    
+</table>-->
+
+
+  <div class="row" style="text-align: center;" >
+    <div class="col-md-1 order-md-1"></div>
+    <div class="col-md-10 order-md-1">
+      <h6 style="text-align: center;" class="mb-3 colorForm"></h6 >
+      <form class="needs-validation" novalidate="">
+
+       
+        <div class="col-md-6 mb-3 formM">
+          <label for="address" class="colorForm">Nombres</label>
+          <input type="text" class="form-control" id="address" placeholder="Ingrese sus Nombres" required="">
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3 formM">
+          <label for="address" class="colorForm">Apellidos</label>
+          <input type="text" class="form-control" id="address" placeholder="ingrese sus Apellidos" required="">
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+
+
+         <div class="col-md-5 mb-3 formM">
+          <label for="email" class="colorForm">Email</label>
+          <input type="email" required class="form-control" id="email" placeholder="Ingrese su email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+        </div>
+        
+
+         <div class="col-md-6 mb-3 formM">
+          <label for="address" class="colorForm">Dirección</label>
+          <input type="text" class="form-control" id="address" placeholder="ingrese su dirección" required="">
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+
+
+        <div class="col-md-5 mb-3 formM">
+          <label for="address" class="colorForm">Teléfono</label>
+          <input type="text" class="form-control" id="address" placeholder="Ingrese su Teléfono" required="">
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+  
+
+
+
+        <div class="row">
+ 
+        </div>
+        <hr class="mb-0">
+        <label class="mb-3 colorForm" ></label>
+
+        
+                    <div class="form-group" id="credit_cards">
+                        <img src="/img/visa.jpg" id="visa">
+                        <img src="/img/mastercard.jpg" id="mastercard">
+                        <img src="/img/amex.jpg" id="amex">
+                    </div>
+
+
+
+        <div class="row">
+          <div class="col-md-6 mb-3 formM">
+            <label for="cc-name" class="colorForm">Titular de la Tarjeta</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="Nombre del titular" required="">
+            <div class="invalid-feedback">
+              El nombre es requerido
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 formM">
+            <label for="cc-number" class="colorForm">Numero de la Tarjeta</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="#### #### #### ####" required="">
+
+
+
+            <div class="invalid-feedback">
+              El numero de la tarjeta de credito es requerida
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3 formM">
+            <label for="cc-expiration" class="colorForm">Fecha de Caducidad</label>
+            <input type="expiration_date" class="form-control" id="cc-expiration" placeholder="MM/AA" required="">
+            <div class="invalid-feedback">
+            Fecha de expiración es requerida
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 formM">
+            <label for="cc-cvv" class="colorForm">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="###" required="">
+            <div class="invalid-feedback">
+              El CVV es requerido
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="button">
+        <button  class="btn btn-danger" style="border-radius: 4px;" type="submit" onclick="confirm('Compra aceptada. Gracias por su compra');  clicked();">Comprar Ahora</button>
+
+    <p>
+    <a asp-action="Documento"> </a>
+    </p>
+
+    <p>
+
+           
+    <a asp-action="Documento"  class="btn btn-primary" >GENERAR BOLETA</a>
+    </p>
+        </div>
+        </form>
+    </div>
+  </div>
+  <div class="col-md-1 order-md-1"></div>
+ </div> 
+        <!--</form>-->
+    </div>
+  </div>
+  <div class="col-md-1 order-md-1"></div>
+ </div> 
+ </section>
+  
+
+
+
+
+ 

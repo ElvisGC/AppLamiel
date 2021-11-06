@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using AppLamiel.Models;
+using OpticaSanfrancisco.Models;
 
-namespace AppLamiel.Controllers
+namespace OpticaSanfrancisco.Controllers
 {
     public class HomeController : Controller
     {

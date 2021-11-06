@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AppLamiel.Data
+namespace OpticaSanfrancisco.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -12,5 +12,13 @@ namespace AppLamiel.Data
             : base(options)
         {
         }
+
+        public DbSet<OpticaSanfrancisco.Models.Citas> Citas {get; set;} 
+        public DbSet<OpticaSanfrancisco.Models.Contactanos> Contactanos { get; set; }
+        public DbSet<OpticaSanfrancisco.Models.Productos> Productos { get; set; }
+        public DbSet<OpticaSanfrancisco.Models.Proforma> Carrito { get; set; }
+
+
+
     }
 }

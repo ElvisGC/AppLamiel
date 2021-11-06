@@ -1,0 +1,152 @@
+@model IEnumerable<OpticaSanfrancisco.Models.Proforma>
+@{
+    ViewData["Title"] = "Carrito de Compras";
+}
+
+<section id="catalogue" class="catalogue section-bg" style="text-align: center;">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-aos="fade-in">Carrito de Compra</h2>
+          <p data-aos="fade-in"></p>
+        </div>
+    <div class="row catalogue-container" data-aos="fade-up">
+
+
+    <table class="table table-hover" >
+    <thead class="tables" >
+        <tr style="color: white;">
+                <th scope="col">
+                   Imagen
+                </th>
+
+                <th scope="col">
+                Nombre  
+                </th>
+
+               
+
+                <th scope="col">
+                 Cantidad
+                </th>
+
+                <th scope="col">
+                 Precio Unit
+                </th>
+
+               
+                <th scope="col">
+                 Subtotal
+                </th>
+                 <th scope="col">
+                
+                </th>
+
+               
+        </tr>
+    </thead>
+	@foreach (var item in Model)
+	{
+        //@if (item.Email == @User.Identity.Name)
+        //{
+            <tr>
+            <td>
+               <img class="img-responsive" width="170" height="170" style="margin-left: 20%;"
+                       src="~/Img/Productos/@item.Producto.Imagen" alt="@item.Producto.Imagen"  />
+
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Marca)
+            </td>
+
+          
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+          
+               
+   <td>
+                    S/.
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+            @{
+                Decimal total1 = 0;
+               total1 =   item.Price*item.Quantity;
+               
+            }
+                    <td>
+                        <strong>
+                    S/.
+                    @Html.DisplayFor(modelItem => total1)
+                    </strong>
+                    </td>
+
+   
+          
+
+            <td>
+                <a href="/Proforma/Editar/@item.ID" class="btn btn-secondary"> <img src="~/img/carro.png"class="carrito" width="25"> Editar</a>
+
+               
+
+
+                <form action="/Proforma/borrarregion" method="post" class="d-inline-block">
+                    <input type="hidden" name="id" value="@item.ID" />
+                    
+                    <button  class="btn btn-primary" >  <img src="~/img/carro.png"class="carrito" width="25"> Quitar </button> 
+
+                </form>
+
+                
+            
+                
+            </td>
+            </tr>
+            
+        //}
+	}
+    </tbody>    
+</table>
+@{
+          Decimal total = 0;
+
+         var contar = 0;
+      }
+      @foreach (var item in Model){
+         <tr>
+            @{
+               total = total + item.Price*item.Quantity;
+               contar++;
+            }
+         </tr>
+      }
+
+
+
+
+
+
+
+
+<div class="container">
+          <h3><strong>TOTAL A PAGAR: S/. @total </strong></h3> 
+           
+            </div>
+           
+            </div>
+    </section>
+           
+            </div>
+    </section>
+
+           <div class="get-started" style="text-align: center;">
+                <a class="btn btn-danger"  href="../Proforma/Proceso"> Realizar Pago</a>
+                  <!--<button id="btt">  <a  style="text-align: center;border-radius: 4px;" asp-area="" asp-controller="Proforma" asp-action="Proceso">Confirmar</a></button>-->
+                   <!--<a class="btn btn-secondary"  href="../Catalogo/Index"> <img src="~/img/carro.png"class="carrito" width="25"> Seguir comprando</a>-->
+           </div>
+       
+
+
+      <br>
+
