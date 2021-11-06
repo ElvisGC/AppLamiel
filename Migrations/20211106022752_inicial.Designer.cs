@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using OpticaSanfrancisco.Data;
+using PasteleriaLaMiel.Data;
 
-namespace OpticaSanfrancisco.Migrations
+namespace PasteleriaLaMiel.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210614025431_inicial")]
+    [Migration("20211106022752_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -219,7 +219,7 @@ namespace OpticaSanfrancisco.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("OpticaSanfrancisco.Models.Citas", b =>
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Citas", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -262,7 +262,7 @@ namespace OpticaSanfrancisco.Migrations
                     b.ToTable("Citas");
                 });
 
-            modelBuilder.Entity("OpticaSanfrancisco.Models.Contactanos", b =>
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Contactanos", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -295,7 +295,7 @@ namespace OpticaSanfrancisco.Migrations
                     b.ToTable("t_contactanos");
                 });
 
-            modelBuilder.Entity("OpticaSanfrancisco.Models.Productos", b =>
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Productos", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -356,7 +356,7 @@ namespace OpticaSanfrancisco.Migrations
                     b.ToTable("t_product");
                 });
 
-            modelBuilder.Entity("OpticaSanfrancisco.Models.Proforma", b =>
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Proforma", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -434,16 +434,16 @@ namespace OpticaSanfrancisco.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OpticaSanfrancisco.Models.Proforma", b =>
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Proforma", b =>
                 {
-                    b.HasOne("OpticaSanfrancisco.Models.Productos", "Producto")
+                    b.HasOne("PasteleriaLaMiel.Models.Productos", "Producto")
                         .WithMany("ProformaItems")
                         .HasForeignKey("ProductoID");
 
                     b.Navigation("Producto");
                 });
 
-            modelBuilder.Entity("OpticaSanfrancisco.Models.Productos", b =>
+            modelBuilder.Entity("PasteleriaLaMiel.Models.Productos", b =>
                 {
                     b.Navigation("ProformaItems");
                 });

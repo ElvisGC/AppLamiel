@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OpticaSanfrancisco.Models
+namespace PasteleriaLaMiel.Models
 {
     //CARRITO
     [Table("t_proforma")]

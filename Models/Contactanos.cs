@@ -1,9 +1,9 @@
 using System;
-using OpticaSanfrancisco.Models;
+using PasteleriaLaMiel.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OpticaSanfrancisco.Models
+namespace PasteleriaLaMiel.Models
 {
     [Table("t_contactanos")]
     public class Contactanos

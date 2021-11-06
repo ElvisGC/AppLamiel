@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OpticaSanfrancisco.Models
+namespace PasteleriaLaMiel.Models
 {
     [Table("t_product")]
     public class Productos

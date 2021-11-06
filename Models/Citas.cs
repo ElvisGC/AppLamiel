@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace OpticaSanfrancisco.Models
+namespace PasteleriaLaMiel.Models
 {
      [Table ("Citas")]
     public class Citas

@@ -5,13 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OpticaSanfrancisco.Models;
-using OpticaSanfrancisco.Data;
+using PasteleriaLaMiel.Models;
+using PasteleriaLaMiel.Data;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
 
-namespace OpticaSanfrancisco.Controllers
+namespace PasteleriaLaMiel.Controllers
 {
     
     public class ContactanosController : Controller

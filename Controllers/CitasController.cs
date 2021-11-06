@@ -1,13 +1,13 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OpticaSanfrancisco.Data;
-using OpticaSanfrancisco.Models;
+using PasteleriaLaMiel.Data;
+using PasteleriaLaMiel.Models;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
 using Microsoft.EntityFrameworkCore;
 
-namespace OpticaSanfrancisco.Controllers
+namespace PasteleriaLaMiel.Controllers
 {
     public class CitasController : Controller
     {

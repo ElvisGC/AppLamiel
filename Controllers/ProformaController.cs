@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OpticaSanfrancisco.Data;
-using OpticaSanfrancisco.Models;
+using PasteleriaLaMiel.Data;
+using PasteleriaLaMiel.Models;
 using Microsoft.AspNetCore.Identity;
 using Rotativa.AspNetCore;
 
-namespace OpticaSanfrancisco.Controllers
+namespace PasteleriaLaMiel.Controllers
 {
     public class ProformaController : Controller
     {

@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using OpticaSanfrancisco.Data;
+using PasteleriaLaMiel.Data;
 using Rotativa.AspNetCore;
 
-namespace OpticaSanfrancisco.Controllers
+namespace PasteleriaLaMiel.Controllers
 {
     public class DocumentoController : Controller
     {
