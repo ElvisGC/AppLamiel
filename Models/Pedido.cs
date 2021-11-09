@@ -23,6 +23,9 @@ namespace PasteleriaLaMiel.Models
         [Column("celular")]
         public string Celular { get; set; }
 
+       
+
+
         [Column("email")]
         public string Email { get; set; }
 
