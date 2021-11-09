@@ -770,3 +770,20 @@ background: #213B52;
   color: white;
 
 }
+
+
+
+.whatsapp {
+ position: fixed; 
+ right:15px; /*Margen derecho*/
+ bottom:10px; /*Margen abajo*/
+ z-index:99;
+}
+.whatsapp img {
+ width:10px; /*Alto del icono*/
+ height:10px; /*Ancho del icono*/
+}
+.whatsapp:hover{
+opacity: 0.5 !important;
+filter: alpha(opacity=70) !important;
+}
